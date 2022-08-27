@@ -1,4 +1,16 @@
 {
     "/src/public/js/app.js": "/src/public/js/app.js",
-    "/src/public/css/app.css": "/src/public/css/app.css"
+    "/src/public/css/app.css": "/src/public/css/app.css",
+    "/src/public/img/blockchain-crypto-advising.png": "/src/public/img/blockchain-crypto-advising.png",
+    "/src/public/img/blockchain-litigaqtion.png": "/src/public/img/blockchain-litigaqtion.png",
+    "/src/public/img/blockchain-nft.png": "/src/public/img/blockchain-nft.png",
+    "/src/public/img/broker-dealer.png": "/src/public/img/broker-dealer.png",
+    "/src/public/img/bull-blockchain-slide1.jpg": "/src/public/img/bull-blockchain-slide1.jpg",
+    "/src/public/img/bull-blockchain-slide2-1.jpg": "/src/public/img/bull-blockchain-slide2-1.jpg",
+    "/src/public/img/business-structuring-1.png": "/src/public/img/business-structuring-1.png",
+    "/src/public/img/data-decurity-privacy.png": "/src/public/img/data-decurity-privacy.png",
+    "/src/public/img/digital-assets.png": "/src/public/img/digital-assets.png",
+    "/src/public/img/fin-tech.png": "/src/public/img/fin-tech.png",
+    "/src/public/img/fund-formation.png": "/src/public/img/fund-formation.png",
+    "/src/public/img/intellectual-property.png": "/src/public/img/intellectual-property.png"
 }

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-transparent fixed-top p-4 px-5">
+<nav class="navbar-content navbar navbar-expand-lg fixed-top p-4 px-5">
   <div class="container-fluid">
     <a class="navbar-brand" href="/home">
       <img
@@ -9,7 +9,7 @@
       />
     </a>
     <button
-      class="navbar-toggler"
+      class="navbar-toggler text-white"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#navbarNavAltMarkup"
@@ -17,19 +17,139 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      <span class="navbar-toggler-icon"></span>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="35"
+        height="35"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+        ></path>
+      </svg>
     </button>
     <div
       class="collapse navbar-collapse justify-content-end"
       id="navbarNavAltMarkup"
     >
-      <div class="navbar-nav gap-3">
-        <a class="nav-link btn rounded-5 px-4" href="/home">Home</a>
-        <a class="nav-link btn rounded-5 px-4" href="/pratice">Pratice Areas</a>
-        <a class="nav-link btn rounded-5 px-4" href="/about">About Us</a>
-        <a class="nav-link btn rounded-5 px-4" href="/news">Recent News</a>
-        <a class="nav-link btn rounded-5 px-4" href="/contact">Contact Us</a>
+      <div class="navbar-nav gap-md-3 gap-2">
+        <a
+          class="btn btn-outline-light rounded-0 border-0 px-3"
+          href="/home"
+        >Home</a>
+        <div class="dropdown-menu-item">
+          <div class="sm-btn-dropdown">
+            <a
+              class="w-100 btn btn-outline-light btn-dropdown rounded-0 border-0 px-3"
+              href="/pratice"
+            >Pratice Areas</a>
+            <div
+              class="triangle-btn btn btn-outline-secondary border-0 rounded-0 position-absolute text-white p-2"
+              onclick="ToggleMenuItems()"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-caret-down-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+          <ul
+            class="list-unstyled bg-dark m-0 border-0 rounded-0"
+            id="menu-list"
+          >
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/blockchain-advising"
+              >Banking and Payments Law</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/blockchain-litigation"
+              >Blockchain Litigation</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/corporate-governance"
+              >Business Structuring and Corporate Law</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/broker-dealer"
+              >Broker-Dealer Registration and Compliance</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/digital-assets"
+              >Digital Assets and Token Projects</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/fintech-cryptocurrency"
+              >Fintech and Virtual Currency Business Compliance</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/fund-formation"
+              >Fund Formation and Investment Adviser Registration</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/intellectual-property"
+              >Intellectual Property</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/cybersecurity"
+              >Digital Securities and Tokenization</a></li>
+            <li><a
+                class="btn btn-outline-light rounded-0 border-0 px-4 py-3 w-100"
+                
+                href="/pratice/non-fungible"
+              >Non-Fungible Tokens (NFTs)</a></li>
+          </ul>
+        </div>
+        <a
+          class="btn btn-outline-light rounded-0 border-0 px-3"
+          href="/about"
+        >About Us</a>
+        <a
+          class="btn btn-outline-light rounded-0 border-0 px-3"
+          href="/news"
+        >Recent News</a>
+        <a
+          class="btn btn-outline-light rounded-0 border-0 px-3"
+          href="/contact"
+        >Contact Us</a>
       </div>
     </div>
   </div>
 </nav>
+
+<script>
+//* constants
+const navbarMenu = document.getElementById("menu-list");
+const navbarMenuItems = document.getElementById("menu-items");
+let toggle = false;
+
+function ToggleMenuItems() {
+  if (toggle) {
+    navbarMenu.classList.remove("dropdown-list");
+    toggle = false;
+  } else {
+    toggle = true;
+    navbarMenu.classList.add("dropdown-list");
+  }
+}
+</script>

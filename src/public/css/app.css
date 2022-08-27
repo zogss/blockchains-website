@@ -20186,4 +20186,324 @@ textarea.form-control-lg {
 }
 * {
   margin: 0;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes fade {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scale-in-center {
+  0% {
+    transform: background-size(120%, 120%);
+  }
+  100% {
+    transform: background-size(100%, 100%);
+  }
+}
+@keyframes scale-in-center {
+  0% {
+    transform: background-size(120%, 120%);
+  }
+  100% {
+    transform: background-size(100%, 100%);
+  }
+}
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1750px);
+  }
+}
+.navbar-content {
+  transition: background 0.4s ease-in-out;
+}
+
+.dropdown-menu-item {
+  transition: 0.3s ease-in-out;
+}
+
+.carousel-item {
+  min-height: inherit;
+}
+
+.header-background {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://bullblockchainlaw.com/wp-content/uploads/2021/11/header2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  filter: brightness(50%);
+}
+
+.header-background-about {
+  width: 100%;
+  height: 100%;
+  background-image: url(https://bullblockchainlaw.com/wp-content/uploads/2021/12/about-us-header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  filter: brightness(50%);
+}
+
+.carousel-img {
+  max-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: rgb(29, 31, 32);
+  -webkit-animation: scale-in-center 15s ease-in-out;
+          animation: scale-in-center 15s ease-in-out;
+}
+
+.carousel-img-1 {
+  background-image: url(https://bullblockchainlaw.com/wp-content/uploads/2021/11/bull-blockchain-slide1-1.jpg);
+}
+
+.carousel-img-2 {
+  background-image: url(https://bullblockchainlaw.com/wp-content/uploads/2022/06/bull-blockchain-slide2-1.jpg);
+}
+
+.carousel-text-block {
+  padding-bottom: 10%;
+}
+
+.carousel-text-block .welcome-title {
+  -webkit-animation: fade 1.8s ease-in-out;
+          animation: fade 1.8s ease-in-out;
+}
+
+.carousel-text-block .welcome-text {
+  -webkit-animation: fade 2s ease-in-out;
+          animation: fade 2s ease-in-out;
+}
+
+.carousel-text-block .welcome-description {
+  -webkit-animation: fade 2.2s ease-in-out;
+          animation: fade 2.2s ease-in-out;
+}
+
+.carousel-text-block div a {
+  -webkit-animation: fade 2.4s ease-in-out;
+          animation: fade 2.4s ease-in-out;
+}
+
+.carousel-control-button {
+  transition: 1s;
+}
+
+.carousel-control-button:hover {
+  background-color: rgb(31, 31, 31);
+  opacity: 0.6;
+}
+
+.welcome-title {
+  color: rgb(70, 70, 70);
+}
+
+.news-card:hover .news-badge a {
+  background-color: rgb(19, 19, 19);
+  border-color: transparent;
+}
+
+.news-card .news-badge a {
+  font-size: 0.7em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: 0.3s;
+}
+
+.news-card-title {
+  line-height: 110%;
+}
+
+.slider {
+  background: white;
+  box-shadow: 0px 10px 15px 3px rgba(0, 0, 0, 0.13);
+  height: 100%;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  -webkit-animation: scroll 40s linear infinite;
+          animation: scroll 40s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5625rem;
+  width: 218.75rem;
+}
+.slider .slide img {
+  max-height: 10vh !important;
+  width: 100%;
+}
+
+.partners-block-2 {
+  background-color: rgb(6, 35, 62);
+  min-height: 60vh !important;
+}
+
+[data-animation] {
+  opacity: 0;
+  transition: 0.8s ease-in-out;
+}
+
+[data-animation=up] {
+  transform: translateY(-3.125rem);
+}
+
+[data-animation].animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media only screen and (min-width: 300px) {
+  .welcome-title {
+    font-size: 1em;
+  }
+  .welcome-description {
+    font-size: 0.8em;
+  }
+  .welcome-text {
+    font-size: 1.5em;
+    line-height: 120%;
+  }
+  .carousel-img {
+    min-height: 60vh;
+  }
+  .triangle-btn {
+    display: inline-block !important;
+  }
+  .dropdown-menu-item ul {
+    display: none;
+    transition: 1s ease-in-out;
+  }
+  .dropdown-list {
+    display: block !important;
+    position: relative !important;
+    background-color: transparent !important;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .welcome-title {
+    font-size: 1.1em;
+  }
+  .welcome-description {
+    font-size: 1em;
+  }
+  .welcome-text {
+    font-size: 2.2em;
+    line-height: 130%;
+  }
+  .carousel-img {
+    min-height: 70vh;
+  }
+  .triangle-btn {
+    display: inline-block !important;
+  }
+  .dropdown-menu-item ul {
+    display: none;
+    transition: 1s ease-in-out;
+  }
+  .dropdown-list {
+    display: block !important;
+    position: relative !important;
+    background-color: transparent !important;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .welcome-title {
+    font-size: 1.3em;
+  }
+  .welcome-description {
+    font-size: 1.2em;
+  }
+  .welcome-text {
+    font-size: 3em;
+  }
+  .carousel-img {
+    min-height: 80vh;
+  }
+  .dropdown-menu-item ul {
+    display: none;
+    position: absolute !important;
+    background-color: #090909 !important;
+  }
+  .dropdown-menu-item ul li a {
+    text-align: left;
+  }
+  .dropdown-menu-item:hover ul {
+    display: block !important;
+  }
+  .triangle-btn {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .welcome-description {
+    font-size: 1.4em;
+  }
+  .welcome-text {
+    font-size: 3.5em;
+  }
+  .carousel-img {
+    min-height: 100vh;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .welcome-text {
+    font-size: 3.5em;
+  }
+  .carousel-img {
+    min-height: 100vh;
+  }
 }

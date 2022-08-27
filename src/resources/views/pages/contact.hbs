@@ -2,7 +2,8 @@
   class="d-flex justify-content-center align-items-center"
   style="height: 60vh;"
 >
-  <div class="container position-absolute" style="top: 300px;">
+  <div class="header-background"></div>
+  <div class="container position-absolute text-white" style="top: 300px;">
     <h1 class="text-center">Contact Us</h1>
     <p class="text-center">
       <a
@@ -14,7 +15,7 @@
   </div>
 </section>
 <section
-  class="d-flex min-vh-100 justify-content-center align-items-center bg-dark bg-opacity-25 p-md-0 py-5"
+  class="d-flex min-vh-100 justify-content-center align-items-center py-5"
 >
   <div class="container row gap-md-0 gap-5 py-md-5 py-3">
     <div class="col-md-8 col-lg-8 col-xl-8 text-muted">
@@ -24,32 +25,32 @@
           touch. Fields marked (*) are required.</p>
       </div>
       <form class="row container g-3 needs-validation pt-5" novalidate>
-        <div class="col-md-6">
-          <label for="validationCustom01" class="form-label pt-3">First name *</label>
+        <div class="col-md-6" data-animation="up">
+          <label for="validationCustom01" class="form-label pt-3 fw-semibold">First name *</label>
           <input
             type="text"
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom01"
             placeholder="John"
             required
           />
         </div>
-        <div class="col-md-6">
-          <label for="validationCustom02" class="form-label pt-3">Last name *</label>
+        <div class="col-md-6" data-animation="up">
+          <label for="validationCustom02" class="form-label pt-3 fw-semibold">Last name *</label>
           <input
             type="text"
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom02"
             placeholder="Doe"
             required
           />
         </div>
-        <div class="col-md-12">
-          <label for="validationCustom03" class="form-label pt-3">Email address
+        <div class="col-md-12" data-animation="up">
+          <label for="validationCustom03" class="form-label pt-3 fw-semibold">Email address
             *</label>
           <input
             type="email"
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom03"
             placeholder="example@domain.com"
             required
@@ -59,11 +60,11 @@
           </div>
         </div>
         <!-- form check input -->
-        <div class="col-md-12 d-flex flex-column gap-1">
-          <p class="form-label pt-3">I am interested in</p>
+        <div class="col-md-12 d-flex flex-column gap-1" data-animation="up">
+          <p class="form-label pt-3 fw-semibold">I am interested in</p>
           <label
             for="flexCheck1"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -78,7 +79,7 @@
           </label>
           <label
             for="flexCheck2"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -93,7 +94,7 @@
           </label>
           <label
             for="flexCheck3"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -108,7 +109,7 @@
           </label>
           <label
             for="flexCheck4"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -123,7 +124,7 @@
           </label>
           <label
             for="flexCheck5"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -138,7 +139,7 @@
           </label>
           <label
             for="flexCheck6"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -153,7 +154,7 @@
           </label>
           <label
             for="flexCheck7"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -168,7 +169,7 @@
           </label>
           <label
             for="flexCheck8"
-            class="text-start btn btn-dark rounded-1 border-0"
+            class="text-start btn btn-outline-light rounded-1 border-0"
           >
             <input
               class="form-check-input"
@@ -183,11 +184,11 @@
           </label>
         </div>
         <!-- end form check input -->
-        <div class="col-md-12">
-          <label for="validationCustom04" class="form-label pt-3">Enter the
+        <div class="col-md-12" data-animation="up">
+          <label for="validationCustom04" class="form-label pt-3 fw-semibold">Enter the
             details of your case here. *</label>
           <textarea
-            class="form-control border-0 rounded-1"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1"
             id="validationCustom04"
             aria-label="With textarea"
           ></textarea>
@@ -195,7 +196,7 @@
             Please provide a valid zip.
           </div>
         </div>
-        <div class="col-12">
+        <div class="col-12" data-animation="up">
           <button
             class="btn btn-primary rounded-1 py-2 fw-bold"
             type="submit"
@@ -203,7 +204,7 @@
         </div>
       </form>
     </div>
-    <div class="col-md-3 col-lg-3 col-xl-3 d-flex flex-column gap-4 text-light">
+    <div class="col-md-3 col-lg-3 col-xl-3 d-flex flex-column gap-4">
       <div class="text-left">
         <p class="text-primary">
           <svg
@@ -220,14 +221,14 @@
             ></path>
           </svg>
         </p>
-        <p class="m-0 fs-4 fw-bolder text-light">
+        <p class="m-0 fs-4 fw-bolder">
           Address
         </p>
         <p class="text-muted">
           21 S 11th Street, Floor 2 Philadelphia, PA 19107
         </p>
       </div>
-      <div class="text-left">
+      <div class="text-left" data-animation="up">
         <p class="text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -242,7 +243,7 @@
             ></path>
           </svg>
         </p>
-        <p class="m-0 fs-4 fw-bolder text-light">
+        <p class="m-0 fs-4 fw-bolder">
           E-mail
         </p>
         <p>
@@ -254,7 +255,7 @@
           </a>
         </p>
       </div>
-      <div class="text-left">
+      <div class="text-left" data-animation="up">
         <p class="text-primary">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -270,21 +271,21 @@
             <path d="M8 14a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
           </svg>
         </p>
-        <p class="m-0 fs-4 fw-bolder text-light">
+        <p class="m-0 fs-4 fw-bolder">
           Phone
         </p>
-        <p class="text-muted">
+        <p class="text-primary">
           1-215-695-5860
         </p>
       </div>
-      <div class="text-left">
-        <p class="fs-4 fw-bolder text-light">
+      <div class="text-left" data-animation="up">
+        <p class="fs-4 fw-bolder">
           Connect
         </p>
         <div>
           <a
-            href=""
-            class="text-decoration-none text-light p-2"
+            href="#"
+            class="text-decoration-none p-2 link-primary text-dark"
             target="_blank"
           >
             <svg
@@ -301,8 +302,8 @@
             </svg>
           </a>
           <a
-            href=""
-            class="text-decoration-none text-light p-2"
+            href="https://twitter.com/andrewbull1988?lang=en%20"
+            class="text-decoration-none p-2 link-primary text-dark"
             target="_blank"
           >
             <svg
@@ -319,8 +320,8 @@
             </svg>
           </a>
           <a
-            href=""
-            class="text-decoration-none text-light p-2"
+            href="https://www.linkedin.com/in/andrew-bull-esq-752bb632/"
+            class="text-decoration-none p-2 link-primary text-dark"
             target="_blank"
           >
             <svg

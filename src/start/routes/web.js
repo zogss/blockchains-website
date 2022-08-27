@@ -58,8 +58,8 @@ router.get("/pratice/cybersecurity", (req, res) => {
   res.render("pratice/cybersecurity");
 });
 
-router.get("/pratice/fun-formation", (req, res) => {
-  res.render("pratice/fun-formation");
+router.get("/pratice/fund-formation", (req, res) => {
+  res.render("pratice/fund-formation");
 });
 
 router.get("/pratice/digital-assets", (req, res) => {

@@ -1,8 +1,9 @@
-<main
-  class="d-flex flex-column min-vh-100"
-  style="background-color: rgb(29, 31, 32);"
->
-  <section class="d-flex min-vh-100">
+<main class="d-flex flex-column" style="background-color: rgb(29, 31, 32);">
+  {{! carousel }}
+  <section
+    class="carousel-section-block d-flex align-items-center justify-content-center"
+    style="max-height: 100vh;"
+  >
     <div
       id="carouselExampleIndicators"
       class="carousel slide w-100"
@@ -13,7 +14,7 @@
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="0"
-          class="active"
+          class="active slide-button"
           aria-current="true"
           aria-label="Slide 1"
         ></button>
@@ -21,41 +22,67 @@
           type="button"
           data-bs-target="#carouselExampleIndicators"
           data-bs-slide-to="1"
+          class="slide-button"
           aria-label="Slide 2"
-        ></button>
-        <button
-          type="button"
-          data-bs-target="#carouselExampleIndicators"
-          data-bs-slide-to="2"
-          aria-label="Slide 3"
         ></button>
       </div>
       <div class="carousel-inner">
-        <div class="carousel-item active justify-center" style="height: 100vh;">
-          <img
-            src="https://www.iekakmi-roadtrips.gr/plugins/fullpage/examples/imgs/bg3.jpg"
-            class="img-fluid w-100"
-            alt="..."
-          />
+        <div
+          class="carousel-item active justify-center carousel-img carousel-img-1"
+        >
+          <div
+            class="carousel-text-block carousel-caption justify-content-start"
+          >
+            <h6
+              class="welcome-title text-start text-uppercase text-white text-opacity-75"
+            >LAWYERS, TECHNOLOGISTS, AND ENTREPRENEURS</h6>
+            <p class="welcome-text text-start text-white fw-bold">The Blockchain
+              &
+              <br />Cruptocurrency Law Firm</p>
+            <p class="welcome-description text-start text-white fw-semibold">
+              We provide a diverse set of services within blockchain technology
+              to our
+              <br />
+              clients across a myriad of industries and jurisdictions.
+            </p>
+            <div class="w-100 d-flex justify-content-start">
+              <a
+                href="/contact"
+                class="fw-semibold btn btn-primary rounded-1"
+              >Get A Consultation</a>
+            </div>
+          </div>
         </div>
-        <div class="carousel-item justify-center" style="height: 100vh;">
-          <img
-            src="https://www.iekakmi-roadtrips.gr/plugins/fullpage/examples/imgs/bg3.jpg"
-            class="img-fluid w-100"
-            alt="..."
-          />
-        </div>
-        <div class="carousel-item justify-center" style="height: 100vh;">
-          <img
-            src="https://www.iekakmi-roadtrips.gr/plugins/fullpage/examples/imgs/bg3.jpg"
-            class="img-fluid w-100"
-            alt="..."
-          />
+        <div class="carousel-item justify-center carousel-img carousel-img-2">
+          <div
+            class="carousel-text-block carousel-caption justify-content-start"
+          >
+            <h6
+              class="welcome-title text-start text-uppercase text-white text-opacity-75"
+            >LAWYERS, TECHNOLOGISTS, AND ENTREPRENEURS</h6>
+            <p class="welcome-text text-start text-white fw-bold">The Blockchain
+              &
+              <br />Cruptocurrency Law Firm</p>
+            <p class="welcome-description text-start text-white fw-semibold">
+              We provide a diverse set of services within blockchain technology
+              to our
+              <br />
+              clients across a myriad of industries and jurisdictions.
+            </p>
+            <div class="w-100 d-flex justify-content-start">
+              <a
+                href="/contact"
+                class="fw-semibold btn btn-primary rounded-1"
+              >Get A Consultation</a>
+            </div>
+          </div>
         </div>
       </div>
       <button
-        class="carousel-control-prev m-auto"
-        style="height: fit-content;"
+        class="carousel-control-prev carousel-control-button m-auto p-md-4 p-2"
+        style="
+        height: fit-content;
+        width: fit-content;"
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="prev"
@@ -64,8 +91,10 @@
         <span class="visually-hidden">Previous</span>
       </button>
       <button
-        class="carousel-control-next m-auto"
-        style="height: fit-content;"
+        class="carousel-control-next carousel-control-button m-auto p-md-4 p-2"
+        style="
+        height: fit-content;
+        width: fit-content;"
         type="button"
         data-bs-target="#carouselExampleIndicators"
         data-bs-slide="next"
@@ -75,26 +104,30 @@
       </button>
     </div>
   </section>
+  {{! services }}
   <section
     class="d-flex min-vh-100 justify-content-center align-items-center pt-md-0 pt-5"
     style="background-color: rgb(6, 35, 62);"
   >
     <div
-      class="container d-flex flex-column gap-4 align-items-center justify-content-center px-md-5 px-3"
+      class="inline-photo show-on-scroll container d-flex flex-column gap-4 align-items-center justify-content-center px-md-5 px-3"
     >
-      <div class="d-flex flex-column gap-4 px-5 text-center">
+      <div
+        class="d-flex flex-column gap-4 px-5 text-center"
+        data-animation="up"
+      >
         <p class="text-white fs-1 fw-bolder">Pratice Areas</p>
-        <p class="text-muted fs-5">Bull Blockchain Law helps clients navigate
-          the complex and fast changing regulations and technology to provide
-          sound advice and solutions for our clients.</p>
+        <p class="text-white text-opacity-50 fs-5">Bull Blockchain Law helps
+          clients navigate navigate the complex and fast changing regulations
+          and technology to provide sound advice and solutions for our clients.</p>
       </div>
       <div
         class="d-flex flex-column gap-5 align-items-center justify-content-center"
       >
-        <div class="row">
+        <div class="row" data-animation="up">
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/digital-assets"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -109,7 +142,7 @@
           </div>
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/fintech-cryptocurrency"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -124,7 +157,7 @@
           </div>
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/broker-dealer"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -139,7 +172,7 @@
           </div>
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/corporate-governance"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -154,7 +187,7 @@
           </div>
           <div class="col-md px-0">
             <a
-              href=""
+              href="/pratice/non-fungible"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -167,10 +200,10 @@
             </a>
           </div>
         </div>
-        <div class="row">
+        <div class="row" data-animation="up">
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/blockchain-advising"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -184,7 +217,7 @@
           </div>
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/intellectual-property"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -198,7 +231,7 @@
           </div>
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/cybersecurity"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -213,7 +246,7 @@
           </div>
           <div class="col-md px-0 border-end border-dark">
             <a
-              href=""
+              href="/pratice/fund-formation"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -228,7 +261,7 @@
           </div>
           <div class="col-md px-0">
             <a
-              href=""
+              href="/pratice/blockchain-litigation"
               class="h-100 w-100 btn btn-outline-primary rounded-0 border-0 d-flex flex-column gap-1 align-items-center justify-content-center text-decoration-none"
             >
               <img
@@ -244,254 +277,131 @@
       </div>
     </div>
   </section>
-  <section class="d-flex min-vh-100 justify-content-center align-items-center">
-    <div class="d-flex flex-column h-100 w-100">
-      <div class="w-100 h-100 m-auto">
-        <div
-          id="carouselExampleIndicators"
-          class="carousel slide"
-          data-bs-ride="true"
-        >
-          <div class="carousel-indicators">
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="0"
-              class="active"
-              aria-current="true"
-              aria-label="Slide 1"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="1"
-              aria-label="Slide 2"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="2"
-              aria-label="Slide 3"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="3"
-              aria-label="Slide 4"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="4"
-              aria-label="Slide 5"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="5"
-              aria-label="Slide 6"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="6"
-              aria-label="Slide 7"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="7"
-              aria-label="Slide 8"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="8"
-              aria-label="Slide 9"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="9"
-              aria-label="Slide 10"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="10"
-              aria-label="Slide 11"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="11"
-              aria-label="Slide 12"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="12"
-              aria-label="Slide 13"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="13"
-              aria-label="Slide 14"
-            ></button>
-            <button
-              type="button"
-              data-bs-target="#carouselExampleIndicators"
-              data-bs-slide-to="14"
-              aria-label="Slide 15"
-            ></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active">
+  {{! areas }}
+  <section
+    class="d-flex min-vh-100 justify-content-center align-items-center bg-white"
+  >
+    <div class="d-flex flex-column min-vh-100 w-100">
+      <div class="w-100 h-100 m-auto d-flex flex-column gap-5">
+        <p class="fs-1 text-center fw-bold" data-animation="up">Our Partners</p>
+        <div class="slider" data-animation="up">
+          <div class="slide-track py-2">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2022/04/Logo-2.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2022/02/logo-securitize-300x46-1.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/icomply-300x79-1.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/bitcoin-ira-logo-300x61-1.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/vegawallet-logo-300x71-1.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/Verif-y-logo-1-300x123-1.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/STONEGATEGLOBALPNG-med.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/blockdrop_logo.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/nexus-logo-1.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/11/wave-logo.jpg"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/12/protos.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/12/60e7222ec963487472663c18_Bumper-Vertical-Logo-Inverse-600-p-500.jpg"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/12/3411f3edc65a-3rdrequests.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2021/12/KoreConXx2.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
-            <div class="carousel-item">
+            <div class="slide d-flex">
               <img
                 src="https://bullblockchainlaw.com/wp-content/uploads/2022/08/tzero_dark_Logo.png"
-                class="img-fluid"
-                alt="..."
+                alt="logo"
               />
             </div>
           </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleIndicators"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
         </div>
       </div>
-      <div class="w-100" style="background-color: rgb(6, 35, 62);">
-        <div class="container">
+      <div
+        class="partners-block-2 d-flex justify-content-center align-items-center w-100"
+      >
+        <div class="container" data-animation="up">
           <div class="row gap-7 py-5">
             <div class="col-md-7 d-flex flex-column w-full text-start">
               <p class="fs-2 text-light fw-bold">A boutique firm with a global
                 perspective</p>
-              <p class="fs-5"><strong class="text-primary">Internationally
-                  Recognized</strong><br />Comprised of leading blockchain
-                technology attorneys featured in Forbes and international legal
-                publications.</p>
-              <p class="fs-5"><strong class="text-primary">Thought Leaders</strong><br
-                />Selected by EU Commission as U.S. law firm leading the study
-                of legality, governance, and interoperability of blockchains and
-                smart contracts.</p>
+              <p class="fs-5 text-white"><strong
+                  class="text-primary"
+                >Internationally Recognized</strong><br />Comprised of leading
+                blockchain technology attorneys featured in Forbes and
+                international legal publications.</p>
+              <p class="fs-5 text-white"><strong class="text-primary">Thought
+                  Leaders</strong><br />Selected by EU Commission as U.S. law
+                firm leading the study of legality, governance, and
+                interoperability of blockchains and smart contracts.</p>
             </div>
             <div
               class="col-md-5 d-flex align-items-center justify-content-center"
             >
-              <p class="fs-5"><strong class="text-primary fs-1">$ 500 Million+</strong>
+              <p class="fs-5 text-white"><strong class="text-primary fs-1">$500
+                  Million+</strong>
                 <br />
                 In digital securities offerings.</p>
             </div>
@@ -500,78 +410,141 @@
       </div>
     </div>
   </section>
-  <section class="d-flex min-vh-100 justify-content-center align-items-center">
+  {{! blog }}
+  <section
+    class="d-flex min-vh-100 justify-content-center align-items-center py-5"
+  >
     <div class="container w-100 h-100">
       <div class="d-flex flex-column gap-5">
-        <div class="d-flex flex-column gap-4 align-items-center">
-          <p class="fs-5">OUR BLOG</p>
-          <p class="fs-2">Latest News</p>
-          <p class="fs-4 px-5">Our lawyers produce memoranda that alert our
-            clients to legal and regulatory developments, industry issues, and
-            court decisions and analyze the impact of these developments on our
-            clients.</p>
+        <div
+          class="d-flex flex-column gap-3 align-items-center"
+          data-animation="up"
+        >
+          <p class="m-0 fs-6 text-primary fw-light">OUR BLOG</p>
+          <p class="m-0 fs-1 text-white fw-semibold">Latest News</p>
+          <p class="fs-5 text-white text-opacity-50 text-center px-5 mt-4">Our
+            lawyers produce memoranda that alert our clients to legal and
+            regulatory developments, industry issues, and court decisions and
+            analyze the impact of these developments on our clients.</p>
         </div>
-        <ul class="row w-100 list-unstyled">
-          <li class="col-4 p-3">
-            <div class="d-flex flex-column gap-3 p-4 border">
-              <div></div>
-              <a href="#" class="fs-3 text-decoration-none text-light">DELAWARE
-                COURT AWARDS $25M TO DIAMOND FORTRESS TECHNOLOGIES FOR BREACH OF
-                CRYPTO-PAID CONTRACT</a>
+        <div class="row px-4 px-md-0" data-animation="up">
+          <div class="col-lg-4 col-md-6 p-md-3 py-3">
+            <div
+              class="d-flex flex-column gap-3 p-md-5 px-4 py-5 border border-white border-opacity-25 news-card"
+            >
+              <div class="justify-content-start w-100 d-flex gap-1 news-badge">
+                <a
+                  href="/pratice/"
+                  class="d-flex align-items-center justify-content-center btn btn-primary rounded-0 p-2 fw-bolder"
+                >
+                  BLOCKCHAIN AND FINTECH
+                </a>
+                <a
+                  href="/pratice/"
+                  class="d-flex align-items-center justify-content-center btn btn-primary rounded-0 p-2 fw-bolder"
+                >
+                  DIGITAL SECURITIES
+                </a>
+              </div>
+              <a
+                href="#"
+                class="news-card-title fs-4 link-primary text-decoration-none text-light fw-semibold"
+              >DELAWARE COURT AWARDS $25M TO DIAMOND FORTRESS TECHNOLOGIES FOR
+                BREACH OF CRYPTO-PAID CONTRACT</a>
               <a href="#" class="fs-6 text-decoration-none text-secondary">May
-                23, 2022</a>
-              <p class="fs-4 text-truncate">In a recent opinion in Diamond
-                Fortress Technologies.</p>
+                23, 2022 /</a>
+              <p class="fs-4 text-white text-opacity-50 text-truncate">In a
+                recent opinion in Diamond Fortress Technologies.</p>
             </div>
-          </li>
-          <li class="col-4 p-3">
-            <div class="d-flex flex-column gap-3 p-4 border">
-              <div></div>
-              <a href="#" class="fs-3 text-decoration-none text-light">CLIENT
-                ALERT: NFT Marketplaces and the Shifting Regulatory Environment</a>
+          </div>
+          <div class="col-lg-4 col-md-6 p-md-3 py-3">
+            <div
+              class="d-flex flex-column gap-3 p-md-5 px-4 py-5 border border-white border-opacity-25 news-card"
+            >
+              <div class="justify-content-start w-100 d-flex gap-1 news-badge">
+                <a
+                  href="/pratice/"
+                  class="d-flex align-items-center justify-content-center btn btn-primary rounded-0 p-2 fw-bolder"
+                >
+                  BLOCKCHAIN AND FINTECH
+                </a>
+                <a
+                  href="/pratice/"
+                  class="d-flex align-items-center justify-content-center btn btn-primary rounded-0 p-2 fw-bolder"
+                >
+                  DIGITAL SECURITIES
+                </a>
+              </div>
+              <a
+                href="#"
+                class="news-card-title fs-4 link-primary text-decoration-none text-light fw-semibold"
+              >CLIENT ALERT: NFT Marketplaces and the Shifting Regulatory
+                Environment</a>
               <a href="#" class="fs-6 text-decoration-none text-secondary">May
-                23, 2022</a>
-              <p class="fs-4 text-truncate">In a recent opinion in Diamond
-                Fortress Technologies.</p>
+                23, 2022 /</a>
+              <p class="fs-4 text-white text-opacity-50 text-truncate">In a
+                recent opinion in Diamond Fortress Technologies.</p>
             </div>
-          </li>
-          <li class="col-4 p-3">
-            <div class="d-flex flex-column gap-3 p-4 border">
-              <div></div>
-              <a href="#" class="fs-3 text-decoration-none text-light">Two
-                Defendants Charged In Non-Fungible Token (“NFT”) Fraud And Money
-                Laundering Scheme</a>
+          </div>
+          <div class="col-lg-4 col-md-6 p-md-3 py-3">
+            <div
+              class="d-flex flex-column gap-3 p-md-5 px-4 py-5 border border-white border-opacity-25 news-card"
+            >
+              <div class="justify-content-start w-100 d-flex gap-1 news-badge">
+                <a
+                  href="/pratice/"
+                  class="d-flex align-items-center justify-content-center btn btn-primary rounded-0 p-2 fw-bolder"
+                >
+                  BLOCKCHAIN AND FINTECH
+                </a>
+                <a
+                  href="/pratice/"
+                  class="d-flex align-items-center justify-content-center btn btn-primary rounded-0 p-2 fw-bolder"
+                >
+                  DIGITAL SECURITIES
+                </a>
+              </div>
+              <a
+                href="#"
+                class="news-card-title fs-4 link-primary text-decoration-none text-light fw-semibold"
+              >Two Defendants Charged In Non-Fungible Token (“NFT”) Fraud And
+                Money Laundering Scheme</a>
               <a href="#" class="fs-6 text-decoration-none text-secondary">May
-                23, 2022</a>
-              <p class="fs-4 text-truncate">In a recent opinion in Diamond
-                Fortress Technologies.</p>
+                23, 2022 /</a>
+              <p class="fs-4 text-white text-opacity-50 text-truncate">In a
+                recent opinion in Diamond Fortress Technologies.</p>
             </div>
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+  {{! contact }}
   <section
-    class="d-flex min-vh-100 justify-content-center align-items-center"
-    style="background-color: rgb(34, 36, 37);"
+    class="d-flex min-vh-100 justify-content-center align-items-center px-md-1 px-2 py-5 bg-white"
   >
     <div
       class="d-flex flex-column gap-5 justify-content-center align-items-center"
     >
       <div
         class="d-flex flex-column gap-3 justify-content-center align-items-center"
+        data-animation="up"
       >
         <p class="fs-6 text-primary fw-light">WRITE A MESSAGE </p>
         <p class="fs-1 fw-bold">Get a 30 minute consultation</p>
         <p class="fs-4 text-secondary fw-normal">Please complete the form below
           and we’ll be in touch.</p>
       </div>
-      <form class="row g-3 needs-validation pt-5" novalidate>
+      <form
+        class="row g-3 needs-validation w-100"
+        data-animation="up"
+        novalidate
+      >
         <div class="col-md-12">
           <label for="validationCustom01" class="form-label pt-3">Your name</label>
           <input
             type="text"
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom01"
             placeholder="John Doe"
             required
@@ -582,7 +555,7 @@
             *</label>
           <input
             type="email"
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom02"
             placeholder="example@domain.com"
             required
@@ -595,7 +568,7 @@
           <label for="validationCustom03" class="form-label pt-3">Phone</label>
           <input
             type="text"
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom03"
             placeholder="+1-999-999-9999"
             required
@@ -610,7 +583,7 @@
             class="form-label pt-3"
           >Message</label>
           <textarea
-            class="form-control border-0 rounded-1 py-2"
+            class="form-control bg-secondary bg-opacity-10 border-0 rounded-1 py-2"
             id="validationCustom05"
             aria-label="With textarea"
             placeholder="Tell us briefly about your needs"

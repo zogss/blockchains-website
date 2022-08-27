@@ -3198,7 +3198,41 @@ function withinMaxClamp(min, value, max) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var bootstrap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! bootstrap */ "./node_modules/bootstrap/dist/js/bootstrap.esm.js");
+ //* constants
 
+var navbar = document.getElementsByTagName("nav")[0];
+var target = document.querySelectorAll("[data-animation]");
+var animationClass = "animate";
+var screenWidth = window.innerWidth;
+
+if (screenWidth < 990) {
+  navbar.style.backgroundColor = "#090909";
+}
+
+window.onscroll = function () {
+  var scroll = window.pageYOffset;
+
+  if (scroll > 200) {
+    navbar.style.backgroundColor = "#090909";
+  } else {
+    if (screenWidth > 600) {
+      navbar.style.backgroundColor = "transparent";
+    }
+  }
+};
+
+var animeScroll = function animeScroll() {
+  var windowTop = window.pageYOffset;
+  target.forEach(function (el) {
+    if (windowTop > el.offsetTop - window.innerHeight / 1.1) {
+      el.classList.add(animationClass);
+    }
+  });
+};
+
+window.addEventListener("scroll", function () {
+  animeScroll();
+});
 
 /***/ }),
 
