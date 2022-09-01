@@ -20242,12 +20242,55 @@ textarea.form-control-lg {
     transform: translateX(-1750px);
   }
 }
+@-webkit-keyframes indicator-scroll {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+}
+@keyframes indicator-scroll {
+  0% {
+    opacity: 0;
+    transform: translate(0, -20px);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0, 20px);
+  }
+}
 .navbar-content {
   transition: background 0.4s ease-in-out;
 }
 
-.dropdown-menu-item {
-  transition: 0.3s ease-in-out;
+.scroll-indicator {
+  width: 60px;
+  height: 60px;
+  bottom: 10px;
+  left: 25%;
+  z-index: 50;
+}
+
+.scroll-indicator svg {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: block;
+  position: absolute;
+  -webkit-animation: 2s cubic-bezier(0.31, 0.23, 0.61, 0.97) infinite indicator-scroll;
+          animation: 2s cubic-bezier(0.31, 0.23, 0.61, 0.97) infinite indicator-scroll;
 }
 
 .carousel-item {
@@ -20295,6 +20338,7 @@ textarea.form-control-lg {
 
 .carousel-text-block {
   padding-bottom: 10%;
+  max-width: 60%;
 }
 
 .carousel-text-block .welcome-title {
@@ -20374,8 +20418,8 @@ textarea.form-control-lg {
   top: 0;
 }
 .slider .slide-track {
-  -webkit-animation: scroll 40s linear infinite;
-          animation: scroll 40s linear infinite;
+  -webkit-animation: scroll 40s linear alternate infinite;
+          animation: scroll 40s linear alternate infinite;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20385,6 +20429,22 @@ textarea.form-control-lg {
 .slider .slide img {
   max-height: 10vh !important;
   width: 100%;
+}
+
+.font-georgia {
+  font-family: "Georgia", serif;
+}
+
+.font-arial {
+  font-family: "Arial", sans-serif;
+}
+
+.text-darkslategray {
+  color: #0f4859;
+}
+
+.text-darkslategray-light {
+  color: #3a6f8f;
 }
 
 .partners-block-2 {
@@ -20423,14 +20483,16 @@ textarea.form-control-lg {
   .triangle-btn {
     display: inline-block !important;
   }
-  .dropdown-menu-item ul {
+  .dropdown-menu-item {
     display: none;
-    transition: 1s ease-in-out;
   }
   .dropdown-list {
     display: block !important;
     position: relative !important;
     background-color: transparent !important;
+  }
+  .scroll-indicator {
+    display: none !important;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -20447,12 +20509,14 @@ textarea.form-control-lg {
   .carousel-img {
     min-height: 70vh;
   }
+  .carousel-text-block div a {
+    padding: 10px;
+  }
+  .scroll-indicator {
+    left: 25% !important;
+  }
   .triangle-btn {
     display: inline-block !important;
-  }
-  .dropdown-menu-item ul {
-    display: none;
-    transition: 1s ease-in-out;
   }
   .dropdown-list {
     display: block !important;
@@ -20460,7 +20524,7 @@ textarea.form-control-lg {
     background-color: transparent !important;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 990px) {
   .welcome-title {
     font-size: 1.3em;
   }
@@ -20473,19 +20537,39 @@ textarea.form-control-lg {
   .carousel-img {
     min-height: 80vh;
   }
-  .dropdown-menu-item ul {
+  .dropdown-menu-item {
+    display: block !important;
+  }
+  .dropdown-menu-item div {
     display: none;
     position: absolute !important;
     background-color: #090909 !important;
   }
-  .dropdown-menu-item ul li a {
+  .dropdown-menu-item div a {
     text-align: left;
   }
-  .dropdown-menu-item:hover ul {
+  .dropdown-menu-item:hover div {
     display: block !important;
   }
   .triangle-btn {
     display: none !important;
+  }
+  .carousel-text-block div a {
+    padding: 10px;
+  }
+  #navbarPraticeExpand div {
+    display: none !important;
+  }
+  .sm-btn-dropdown {
+    display: none !important;
+  }
+  .sm-btn-dropdown:hover #navbarPraticeExpand .pratice-items {
+    background-color: rgb(29, 31, 32);
+    display: flex !important;
+    flex-direction: column !important;
+    position: absolute !important;
+    left: 35% !important;
+    margin-top: 38.6% !important;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -20498,6 +20582,12 @@ textarea.form-control-lg {
   .carousel-img {
     min-height: 100vh;
   }
+  .carousel-text-block div a {
+    padding: 12px;
+  }
+  .scroll-indicator {
+    display: block !important;
+  }
 }
 @media screen and (min-width: 1500px) {
   .welcome-text {
@@ -20505,5 +20595,8 @@ textarea.form-control-lg {
   }
   .carousel-img {
     min-height: 100vh;
+  }
+  .carousel-text-block div a {
+    padding: 12px;
   }
 }
