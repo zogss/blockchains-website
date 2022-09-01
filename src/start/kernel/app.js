@@ -12,6 +12,7 @@ import { allowInsecurePrototypeAccess } from "@handlebars/allow-prototype-access
 class App {
   //* short paths
   viewsPath = path.resolve(__dirname, "..", "..", "resources", "views");
+  imgsPath = path.resolve(__dirname, "..", "..", "resources", "img");
   publicPath = path.resolve(__dirname, "..", "..", "public");
 
   constructor() {
@@ -33,6 +34,7 @@ class App {
     this.app.set("view engine", "hbs");
     this.app.set("views", this.viewsPath);
     //* use
+    this.app.use(express.static(this.imgsPath));
     this.app.use("/public", express.static(this.publicPath));
     this.app.use(express.urlencoded({ extended: true }));
     this.app.use(methodOverride("_method"));
