@@ -3206,14 +3206,14 @@ var animationClass = "animate";
 var screenWidth = window.innerWidth;
 
 if (screenWidth < 990) {
-  navbar.style.backgroundColor = "#090909";
+  navbar.style.backgroundColor = "#05233d";
 }
 
 window.onscroll = function () {
   var scroll = window.pageYOffset;
 
   if (scroll > 200) {
-    navbar.style.backgroundColor = "#090909";
+    navbar.style.backgroundColor = "#05233d";
   } else {
     if (screenWidth > 600) {
       navbar.style.backgroundColor = "transparent";

@@ -20187,6 +20187,7 @@ textarea.form-control-lg {
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth !important;
 }
 
 @-webkit-keyframes fade {
@@ -20297,6 +20298,16 @@ textarea.form-control-lg {
   min-height: inherit;
 }
 
+.header-background-image {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+  filter: brightness(50%);
+}
+
 .header-background {
   width: 100%;
   height: 100%;
@@ -20317,6 +20328,42 @@ textarea.form-control-lg {
   background-position: center;
   background-color: black;
   filter: brightness(50%);
+}
+
+.header-background-metaverse {
+  background-image: url("/metaverse-img.jpg");
+}
+
+.header-background-finTech {
+  background-image: url("/fintech-img.jpg");
+}
+
+.header-background-healthtechs {
+  background-image: url("/healthtechs.jpg");
+}
+
+.header-background-mAndA {
+  background-image: url("/business-deal.jpg");
+}
+
+.header-background-tokenisation {
+  background-image: url("/chicago-city-skyline.jpg");
+}
+
+.header-background-sports {
+  background-image: url("/sports-img.jpg");
+}
+
+.header-background-environment {
+  background-image: url("/business-finance.jpg");
+}
+
+.header-background-corporate {
+  background-image: url("/people-in-a-world-connection-technology-meeting.jpg");
+}
+
+.header-background-communications {
+  background-image: url("/law-advice-and-legal-services-concept.jpg");
 }
 
 .carousel-img {
@@ -20447,6 +20494,14 @@ textarea.form-control-lg {
   color: #3a6f8f;
 }
 
+.bg-golden {
+  background-color: #c7a869;
+}
+
+.bg-navy-blue {
+  background-color: #05233d;
+}
+
 .partners-block-2 {
   background-color: rgb(6, 35, 62);
   min-height: 60vh !important;
@@ -20478,7 +20533,10 @@ textarea.form-control-lg {
     line-height: 120%;
   }
   .carousel-img {
-    min-height: 60vh;
+    min-height: 80vh;
+  }
+  .carousel-text-block {
+    padding-bottom: 20%;
   }
   .triangle-btn {
     display: inline-block !important;
@@ -20507,7 +20565,10 @@ textarea.form-control-lg {
     line-height: 130%;
   }
   .carousel-img {
-    min-height: 70vh;
+    min-height: 80vh;
+  }
+  .carousel-text-block {
+    padding-bottom: 18%;
   }
   .carousel-text-block div a {
     padding: 10px;
@@ -20536,6 +20597,9 @@ textarea.form-control-lg {
   }
   .carousel-img {
     min-height: 80vh;
+  }
+  .carousel-text-block {
+    padding-bottom: 15%;
   }
   .dropdown-menu-item {
     display: block !important;
@@ -20581,6 +20645,9 @@ textarea.form-control-lg {
   }
   .carousel-img {
     min-height: 100vh;
+  }
+  .carousel-text-block {
+    padding-bottom: 12%;
   }
   .carousel-text-block div a {
     padding: 12px;
